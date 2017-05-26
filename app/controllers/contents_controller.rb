@@ -1,0 +1,40 @@
+class ContentsController < ApplicationController
+  before_action :logged_in?
+  before_action :set_user
+  before_action :set_content_with_place, only: [:creteorupdate]
+
+  def main
+  end
+
+  def edit
+  end
+
+  def creteandupdate
+    respond_to do |format|
+      if @content.update
+        format.html { redirect_to main_path, notice: '編集しました' }
+        format.json { render :show, status: :created, location: @content }
+      else
+        format.html { render :edit }
+        format.json { render json: @content.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_content_without_place
+      @content = set_contnet(@current_user.id, params[:id])
+    end
+    def set_content_with_place
+      @content = set_content(@current_user.id, params[:id])
+    end
+    #こっちユーザー
+    def set_user
+      @user = current_user
+    end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def content_params
+      params.require(:content).permit(:title, :text, start, :limit, :user_id)
+    end
+end

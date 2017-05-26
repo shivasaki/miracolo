@@ -1,0 +1,58 @@
+<!-- test1ってなってた、メインのページ -->
+<body  style="backgroud:#e6e6e6;">
+<div class="row">
+  <header class=" col-xm-12 col-md-12 col-lg-12 header">
+ MIRACOLO
+</header>
+</div>
+<div class="sidebar2">
+  <div class="time"></div>
+  <div class="line"></div>
+</div>
+  <div class="content">
+  <div class="a" ><%= hashpick(@user.id, 10, "title") %></div>
+  <div class="b" ><%= hashpick(@user.id, 20, "title") %></div>
+  <div class="c" ><%= hashpick(@user.id, 30, "title") %></div>
+  <div class="d" ><%= hashpick(@user.id, 40, "title") %></div>
+  <div class="e" id="trigger-overlay" type="button"><br>
+    <p class="e-1"><%= hashpick(@user.id, 00, "title") %></p>
+  </div>
+  <div class="f" ><%= hashpick(@user.id, 50, "title") %></div>
+  <div class="g" ><%= hashpick(@user.id, 60, "title") %></div>
+  <div class="h" ><%= hashpick(@user.id, 70, "title") %></div>
+  <div class="i" ><%= hashpick(@user.id, 80, "title") %></div>
+</div>
+<div class="sidebar">
+  <div class="menu1"><%= link_to '編集', contents_emmenu_path %></div>
+  <div class="menu2"><%= link_to 'アカウント', users_edit_path %></div>
+  <div class="menu3"><%= link_to 'ログアウト', logout_path, method: :delete %></div>
+</div>
+<div class="overlay overlay-door way" style="background: #cccccc;">
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+			<li>
+        <p href="#" id="yume">
+          <strong>Title:</strong>
+          <%= set_content(@user.id, 00) %>
+        </p>
+      </li>
+			<li>
+        <a href="#" class="detail">
+          <strong>Text:</strong>
+          <%= set_content(@user.id, 00) %>
+        </a>
+      </li>
+			<li>
+        <p href="#" class="detail">
+          <strong>Limit:</strong>
+          <%= set_content(@user.id, 00) %>
+        </p>
+      </li>
+		</ul>
+	</nav>
+</div>
+
+<script src="js/classie.js"></script>
+<script src="js/demo1.js"></script>
+</body>

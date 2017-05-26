@@ -1,0 +1,106 @@
+<!-- user_log関係ややこしいねんけど、要はuserの登録変更削除(sign up, edit, delete)をuserがやってて、
+user_logはログインログアウト(sigi in, sign out)を記録する役割。
+やからuser_logにはログイン画面用のビューだけ-->
+<div class="row">
+<header class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">
+       <%= link_to "MIRACOLO", root_path,:style =>"color:#e6e6e6;" %>
+</header>
+</div>
+
+<%= form_for(:session, url: login_path) do |f| %>
+    <h1  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">ログイン</h1>
+    
+    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+      <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="text-align:center;">
+        <!--<%= f.label :name, "image"%>--></br>
+    <div class="image2"></div>
+    </div>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="field2">
+      <%= f.label :email, 'メールアドレス' %></br>
+      <%= f.text_field :email %>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="field2">
+      <%= f.label :password, 'パスワード' %></br>
+      <%= f.password_field :password %>
+    </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="field2">
+    <%= f.submit 'ログインする' %>
+    </div>
+    </div>
+  </div>
+<% end %>
+<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+<div  id="menu3"class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= link_to "新規登録", users_new_path %></div>
+<div id="menu4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= link_to "トップページ", root_path %></div>
+</div>
+<!-- 元のコード
+<!DOCTYPE html>
+<html>
+  <html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap </title>
+    <link href="css/test1.css" rel="stylesheet">
+    <script src="js/miracolo.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      // 画面幅800px基準でzoomをセット
+      $("html").css("zoom", $(window).width() / 1366);
+      $(window).bind({
+        "resize load orientationchange" : function(event) {
+          var zoom = $(window).width() / 1366;
+          $("html").css("zoom", zoom);
+        }
+      });
+      $(function () {
+        // ページ遷移
+        $('#menu9').click(function() {
+          window.location.href = 'signup.html';
+          // target="_top"
+          // top.location.href = '/';
+        });
+      });
+      $(function () {
+        // ページ遷移
+        $('#menu10').click(function() {
+          window.location.href = 'top.html';
+          // target="_top"
+          // top.location.href = '/';
+        });
+      });
+    </script>
+  </head>
+
+  <body style="background-color:#e6e6e6">
+    <header>
+      MIRACOLO
+    </header>
+    
+    <div class="content">
+      <h1>Log In</h1>
+    <div class="image"></div>
+    <div class="field">
+      Email<br>
+      <textarea class="name" type="email"></textarea>
+    </div>
+    <div class="field">
+      Password<br>
+      <textarea class="name" type="password"></textarea>
+    </div>
+    <button class="button">登録</button>
+  </div>
+  <div class="sidebar">
+    <div id="menu9">Sign up</div>
+    <div id="menu10">Top</div>
+  </div>
+</body>
+</html>　~もうどこで閉じてるかわからん・・・~
+-->
