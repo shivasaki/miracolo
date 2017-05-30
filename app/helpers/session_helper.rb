@@ -8,6 +8,11 @@ module SessionHelper
   def logged_in?
     !current_user.nil?
   end
+  def force_to_log
+    if !logged_in?
+      redirect_to login_path
+    end
+  end
   def log_out
     session.delete(:user_id)
     @current_user = nil

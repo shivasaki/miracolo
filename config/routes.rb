@@ -3,14 +3,17 @@ Rails.application.routes.draw do
   get 'contents/emmenu' => 'contents#emmenu'
   get 'contents/esmenu' => 'contents#esmenu'
   get 'contents/edit/:id' => 'contents#edit'
+  post 'contents/update' => 'contents#update'
+  patch 'contents/update' => 'contents#update'
 
   get 'login' => 'session#login'
   post   'login'   => 'session#create'
   delete 'logout' => 'session#destroy'
 
   get 'users/new'
-  post 'users' => 'users#create' #users_pathがないと言われたので書いた。多分form_for(user)に反応してこのリクエストを受けると解釈されるっぽい。
+  post 'users/create' => 'users#create'
   get 'users/edit'
+  patch 'users/update' =>  'users#update'
 
   get 'site/top'
   root 'site#top'

@@ -12,7 +12,8 @@ class SessionController < ApplicationController
         redirect_to main_path, notice: 'ログインに成功しました'
       end
     else
-      render 'login', alert: 'ログインできませんでした'
+      flash[:alert] = 'ログインできませんでした'
+      render 'login'
     end
   end
 

@@ -1,7 +1,7 @@
 class ContentsController < ApplicationController
-  before_action :logged_in?
+  before_action :force_to_log
   before_action :set_user
-  before_action :set_content_with_place, only: [:creteorupdate]
+  before_action :set_content_with_place, only: [:edit, :update]
 
   def main
   end
@@ -9,7 +9,7 @@ class ContentsController < ApplicationController
   def edit
   end
 
-  def creteandupdate
+  def update
     respond_to do |format|
       if @content.update
         format.html { redirect_to main_path, notice: '編集しました' }

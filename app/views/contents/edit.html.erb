@@ -1,14 +1,9 @@
-<%= form_for @content, :url => {:action => 'createandupdate'} do |f| %>
-  <% if content.errors.any? %>
-    <div id="error_explanation">
-      <h2 ><%= pluralize(content.errors.count, "error") %> prohibited this content from being saved:</h2>
-      <ul>
-        <% content.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<header class= "col-xm-12 col-md-12 col-lg-12 header" >
+  <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6;" %>
+</header>
+
+<%= form_for @content, :url => contents_update_path do |f| %>
+
 
 <div class="col-xs-2 col-md-2 col-lg-2"></div>
 <div class="col-xs-7 col-md-7 col-lg-7" style="background-color: #e6e6e6;">
@@ -35,7 +30,7 @@
         <%= f.datetime_select :start %>〜
       </div>
       <div class="field">〜
-        <%= f.datetime_select :limit %>
+        <%= f.datetime_select :end %>
       </div>
     </div>
     <div class="col-xs-12 col-md-12 col-lg-12" style="margin-top: 20px; margin-right: auto; margin-left: auto;">
