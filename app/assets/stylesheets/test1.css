@@ -14,7 +14,7 @@ body{
   height:150px;
   position: absolute;
   border-radius: 20px;
-  top:100px;
+  top:150px;
   left: 440px;
   background-color:#c93a40;
   text-align: center;
@@ -25,7 +25,7 @@ body{
   height:150px;
   position: absolute;
   left:610px;
-  top:100px;
+  top:150px;
   border-radius: 20px;
   background:#f89405;
   box-shadow: 0px 30px 10px -10px #999999;
@@ -35,7 +35,7 @@ body{
   height:150px;
   position: absolute;
   left:780px;
-  top:100px;
+  top:150px;
   border-radius: 20px;
   background:#f2cf01; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -45,7 +45,7 @@ body{
   height:150px;
   position: absolute;
   left:440px;
-  top:270px;
+  top:320px;
   border-radius: 20px;
   background-color:#93278f; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -55,7 +55,7 @@ body{
   height:150px;
   position: absolute;
   left:610px;
-  top:270px;
+  top:320px;
   border-radius: 20px;
   background:white;
    text-align: center;
@@ -70,7 +70,7 @@ body{
   height:150px;
   position: absolute;
   left:780px;
-  top:270px;
+  top:320px;
   border-radius: 20px;
   background-color:#a0c238;
   box-shadow: 0px 30px 10px -10px #999999; 
@@ -83,14 +83,14 @@ body{
   box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
   left:440px;
-  top:440px;
+  top:490px;
   border-radius: 20px;}
 .h
 {width:150px;
   height:150px;
   position: absolute;
   left:610px;
-  top:440px;
+  top:490px;
   background-color:#65ace4;
    box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
@@ -103,7 +103,7 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
   text-align: center;
   left:780px;
-  top:440px;
+  top:490px;
   border-radius: 20px;}
   .a:hover{
   animation: rumble 0.2s linear infinite;
@@ -1683,6 +1683,8 @@ margin-top:200px;
   background: white;
   margin-top:50px;
 }
-.logo{
-  
+.menubar{
+  height:50px;
+  text-align: center;
+  background-color: white;
 }
