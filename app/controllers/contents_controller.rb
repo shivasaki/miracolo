@@ -11,7 +11,7 @@ class ContentsController < ApplicationController
 
   def update
     respond_to do |format|
-      if @content.update
+      if @content.update(content_params)
         format.html { redirect_to main_path, notice: '編集しました' }
         format.json { render :show, status: :created, location: @content }
       else
@@ -35,6 +35,6 @@ class ContentsController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def content_params
-      params.require(:content).permit(:title, :text, start, :limit, :user_id)
+      params.require(:content).permit(:title, :text, :start, :limit, :user_id)
     end
 end

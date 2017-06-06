@@ -35,19 +35,25 @@
 			<li>
         <p href="#" id="yume">
           <strong>Title:</strong>
-          <%= set_content(@user.id, 00) %>
+          <%= hashpick(@user.id, 00, 'title') %>
         </p>
       </li>
 			<li>
         <a href="#" class="detail">
           <strong>Text:</strong>
-          <%= set_content(@user.id, 00) %>
+          <%= hashpick(@user.id, 00, 'text') %>
         </a>
       </li>
 			<li>
         <p href="#" class="detail">
-          <strong>Limit:</strong>
-          <%= set_content(@user.id, 00) %>
+          <strong>Start:</strong>
+          <%= hashpick(@user.id, 00, 'start') %>
+        </p>
+      </li>
+      <li>
+        <p href="#" class="detail">
+          <strong>End:</strong>
+          <%= hashpick(@user.id, 00, 'end') %>
         </p>
       </li>
 		</ul>
