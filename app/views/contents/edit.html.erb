@@ -1,17 +1,22 @@
-<header class= "col-xm-12 col-md-12 col-lg-12 header" >
-  <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6;" %>
-</header>
+<div class="row">
+  <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to '編集', contents_emmenu_path,:style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'アカウント', users_edit_path,:style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'ログアウト', logout_path, method: :delete,:style => "color:#e5e5e5;" %></div>
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'メインページ', main_path,:style => "color:#e5e5e5;"  %> </div>
+</div>
+
+
 
 <%= form_for @content, :url => contents_update_path do |f| %>
 
 
-<div class="col-xs-2 col-md-2 col-lg-2"></div>
-<div class="col-xs-7 col-md-7 col-lg-7" style="background-color: #e6e6e6;">
+<div class="col-xs-12 col-md-12 col-lg-12" style="background-color: #e6e6e6;">
   <div class="col-xs-12 col-md-12 col-lg-12">
     <div class="col-xs-12 col-md-12 col-lg-12">
-      <div class="field " >
+      <div class="field " style="margin-top:50px;" >
         <%= f.label :目標を決めましょう %>
-        <%= f.text_field :title, :class => "col-xs-8 col-md-8 col-lg-8" %>
+        <%= f.text_field :title %>
       </div>
     </div>
   </div>
@@ -19,7 +24,7 @@
     <div class="col-xs-12 col-md-12 col-lg-12">
       <div class="field " >
         <%= f.label :具体的にすることを書いてください。 %>
-        <%= f.text_area :text, :class => "col-xs-10 col-md-10 col-lg-10" %>
+        <%= f.text_field :text ,:style => "width:400px;" %>
       </div>
     </div>
   </div>
@@ -39,12 +44,6 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="col-xs-3 col-md-3 col-lg-3">
-  <div id="menu1"><%= link_to 'メインページ', main_path %> </div>
-  <div id="menu2"><%= link_to 'アカウント', users_edit_path %></div>
-  <div id="menu3"><%= link_to 'ログアウト', logout_path %></div>
 </div>
 
 <% end %>

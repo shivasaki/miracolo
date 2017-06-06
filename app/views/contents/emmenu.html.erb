@@ -1,8 +1,11 @@
-<header class= "col-xm-12 col-md-12 col-lg-12 header" >
-MIRACOLO
-</header>
-
-<div class="col-xs-9 col-md-9 col-lg-9" >
+<div class="row">
+  <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to '編集', contents_emmenu_path,:style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'アカウント', users_edit_path,:style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'ログアウト', logout_path, method: :delete,:style => "color:#e5e5e5;" %></div>
+    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'メインページ', main_path,:style => "color:#e5e5e5;"  %> </div>
+</div>
+<div class="col-xs-12 col-md-12 col-lg-12" >
   <thead>
     <tr>
       <h1>夢/目標一覧</h1>
@@ -64,9 +67,4 @@ MIRACOLO
     </li>
   </ul>
   <br>
-</div>
-<div class="col-xs-3 col-md-3 col-lg-3">
-  <div id="menu1"><%= link_to 'メインページ', main_path %> </div>
-  <div id="menu2"><%= link_to 'アカウント', users_edit_path %></div>
-  <div id="menu3"><%= link_to 'ログアウト', logout_path %></div>
 </div>
