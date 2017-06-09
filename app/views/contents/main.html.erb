@@ -10,67 +10,67 @@
 
   <div class="content col-xs-12 col-md-12 col-lg-12">
   <%= link_to contents_esmenu_path do %>
-    <div class="a" ><%= hashpick(@user.id, 10, "title") %></div>
+    <div class="a" ><p><%= hashpick(@user.id, 10, "title") %></p></div>
   <% end %>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="b" ><%= hashpick(@user.id, 20, "title") %></div>
+    <div class="b" ><p><%= hashpick(@user.id, 20, "title") %></p></div>
   <% end %>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="c" ><%= hashpick(@user.id, 30, "title") %></div>
+    <div class="c" ><p><%= hashpick(@user.id, 30, "title") %></p></div>
   <% end %>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="d" ><%= hashpick(@user.id, 40, "title") %></div>
+    <div class="d" ><p><%= hashpick(@user.id, 40, "title") %></p></div>
   <% end %>
 
   <div class="e" id="trigger-overlay" type="button"><br>
-    <p class="e-1"><%= hashpick(@user.id, 00, "title") %></p>
+    <p ><%= hashpick(@user.id, 00, "title") %></p>
   </div>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="f" ><%= hashpick(@user.id, 50, "title") %></div>
+    <div class="f" ><p><%= hashpick(@user.id, 50, "title") %></p></div>
   <% end %>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="g" ><%= hashpick(@user.id, 60, "title") %></div>
+    <div class="g" ><p><%= hashpick(@user.id, 60, "title") %></p></div>
   <% end %>
 
   <%= link_to contents_esmenu_path do %>
-    <div class="h" ><%= hashpick(@user.id, 70, "title") %></div>
+    <div class="h" ><p><%= hashpick(@user.id, 70, "title") %></p></div>
   <% end %>
   
   <%= link_to contents_esmenu_path do %>
-    <div class="i" ><%= hashpick(@user.id, 80, "title") %></div>
+    <div class="i" ><p><%= hashpick(@user.id, 80, "title") %></p></div>
   <% end %>
 </div>
 
-<%= flash.now[:notice] %>
+ <%= flash.now[:notice] %>
 <div class="overlay overlay-door way" style="background: #cccccc;">
   <button type="button" class="overlay-close">Close</button>
   <nav>
     <ul>
 			<li>
-        <p href="#" id="yume">
+        <p href="#">
           <strong>Title:</strong>
           <%= hashpick(@user.id, 00, 'title') %>
         </p>
       </li>
 			<li>
-        <a href="#" class="detail">
+        <p href="#" >
           <strong>Text:</strong>
           <%= hashpick(@user.id, 00, 'text') %>
-        </a>
+        </p>
       </li>
 			<li>
-        <p href="#" class="detail">
+        <p href="#" >
           <strong>Start:</strong>
           <%= hashpick(@user.id, 00, 'start') %>
         </p>
       </li>
       <li>
-        <p href="#" class="detail">
+        <p href="#">
           <strong>End:</strong>
           <%= hashpick(@user.id, 00, 'end') %>
         </p>

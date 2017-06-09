@@ -2,17 +2,18 @@
 user_logはログインログアウト(sigi in, sign out)を記録する役割。
 やからuser_logにはログイン画面用のビューだけ-->
 <div class="row">
-<header class="header col-xs-12 col-sm-12 col-md-12 col-lg-12">
-       <%= link_to "MIRACOLO", root_path,:style =>"color:#e6e6e6;" %>
-</header>
+ <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 menubar"><%= link_to "新規登録", users_new_path, :style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 menubar"><%= link_to "トップページ", root_path,:style => "color:#e5e5e5;" %></div>
+ 
 </div>
 
 <%= form_for(:session, url: login_path) do |f| %>
-    <h1  class="col-xs-12 col-sm-12 col-md-12 col-lg-12">ログイン</h1>
+    <h1  style="margin-left:70px;" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">ログイン</h1>
 
     <%= flash.now[:alert] %>
 
-    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="col-xs-12 col-sm-12  col-md-12 col-lg-12" style="text-align:center;">
         <!--<%= f.label :name, "image"%>--></br>
     <div class="image2"></div>
@@ -37,6 +38,7 @@ user_logはログインログアウト(sigi in, sign out)を記録する役割�
     </div>
   </div>
 <% end %>
+<!--
 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 <div  id="menu3"class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= link_to "新規登録", users_new_path %></div>
 <div id="menu4" class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><%= link_to "トップページ", root_path %></div>

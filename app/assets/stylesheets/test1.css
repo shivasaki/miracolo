@@ -14,7 +14,7 @@ body{
   height:150px;
   position: absolute;
   border-radius: 20px;
-  top:150px;
+  top:50px;
   left: 440px;
   background-color:#c93a40;
   text-align: center;
@@ -25,7 +25,7 @@ body{
   height:150px;
   position: absolute;
   left:610px;
-  top:150px;
+  top:50px;
   border-radius: 20px;
   background:#f89405;
   box-shadow: 0px 30px 10px -10px #999999;
@@ -35,7 +35,7 @@ body{
   height:150px;
   position: absolute;
   left:780px;
-  top:150px;
+  top:50px;
   border-radius: 20px;
   background:#f2cf01; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -45,7 +45,7 @@ body{
   height:150px;
   position: absolute;
   left:440px;
-  top:320px;
+  top:220px;
   border-radius: 20px;
   background-color:#93278f; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -55,14 +55,19 @@ body{
   height:150px;
   position: absolute;
   left:610px;
-  top:320px;
+  top:220px;
   border-radius: 20px;
   background:white;
    text-align: center;
   box-shadow: 0px 30px 10px -10px #999999;}
   .e p{
     font-size: 20px;
-    margin-top: 45px;
+    line-height:100px;
+  }
+  .a,.b,.c,.d,.f,.g,.h,.i p{
+    font-size: 20px;
+    line-height: 150px;
+    color:white;
   
   }
 .f
@@ -70,7 +75,7 @@ body{
   height:150px;
   position: absolute;
   left:780px;
-  top:320px;
+  top:220px;
   border-radius: 20px;
   background-color:#a0c238;
   box-shadow: 0px 30px 10px -10px #999999; 
@@ -83,14 +88,14 @@ body{
   box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
   left:440px;
-  top:490px;
+  top:390px;
   border-radius: 20px;}
 .h
 {width:150px;
   height:150px;
   position: absolute;
   left:610px;
-  top:490px;
+  top:390px;
   background-color:#65ace4;
    box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
@@ -103,7 +108,7 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
   text-align: center;
   left:780px;
-  top:490px;
+  top:390px;
   border-radius: 20px;}
   .a:hover{
   animation: rumble 0.2s linear infinite;
@@ -1200,7 +1205,7 @@ width:400px;
   backface-visibility: hidden;
 }
 .overlay ul li p{
-font-size: 40px;
+font-size: 20px;
 font-weight: 300;
   display: block;
  color:white;
