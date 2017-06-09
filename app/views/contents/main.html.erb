@@ -9,17 +9,41 @@
 </div>
 
   <div class="content col-xs-12 col-md-12 col-lg-12">
-  <div class="a" ><%= hashpick(@user.id, 10, "title") %></div>
-  <div class="b" ><%= hashpick(@user.id, 20, "title") %></div>
-  <div class="c" ><%= hashpick(@user.id, 30, "title") %></div>
-  <div class="d" ><%= hashpick(@user.id, 40, "title") %></div>
+  <%= link_to contents_esmenu_path do %>
+    <div class="a" ><%= hashpick(@user.id, 10, "title") %></div>
+  <% end %>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="b" ><%= hashpick(@user.id, 20, "title") %></div>
+  <% end %>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="c" ><%= hashpick(@user.id, 30, "title") %></div>
+  <% end %>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="d" ><%= hashpick(@user.id, 40, "title") %></div>
+  <% end %>
+
   <div class="e" id="trigger-overlay" type="button"><br>
     <p class="e-1"><%= hashpick(@user.id, 00, "title") %></p>
   </div>
-  <div class="f" ><%= hashpick(@user.id, 50, "title") %></div>
-  <div class="g" ><%= hashpick(@user.id, 60, "title") %></div>
-  <div class="h" ><%= hashpick(@user.id, 70, "title") %></div>
-  <div class="i" ><%= hashpick(@user.id, 80, "title") %></div>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="f" ><%= hashpick(@user.id, 50, "title") %></div>
+  <% end %>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="g" ><%= hashpick(@user.id, 60, "title") %></div>
+  <% end %>
+
+  <%= link_to contents_esmenu_path do %>
+    <div class="h" ><%= hashpick(@user.id, 70, "title") %></div>
+  <% end %>
+  
+  <%= link_to contents_esmenu_path do %>
+    <div class="i" ><%= hashpick(@user.id, 80, "title") %></div>
+  <% end %>
 </div>
 
 <%= flash.now[:notice] %>

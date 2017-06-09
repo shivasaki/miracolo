@@ -8,7 +8,7 @@
 
 
 
-<%= form_for @content, :url => contents_update_path do |f| %>
+<%= form_for @content, :url => contents_update_path(id: params[:id]) do |f| %>
 
 
 <div class="col-xs-12 col-md-12 col-lg-12" style="background-color: #e6e6e6;">

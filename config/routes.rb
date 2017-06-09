@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   get 'main' => 'contents#main'
   get 'contents/emmenu' => 'contents#emmenu'
   get 'contents/esmenu' => 'contents#esmenu'
-  get 'contents/edit/:id' => 'contents#edit'
-  post 'contents/update' => 'contents#update'
+  get 'contents/edit' => 'contents#edit'
+  post 'contents/update/:id' => 'contents#update'
   patch 'contents/update' => 'contents#update'
 
   get 'login' => 'session#login'

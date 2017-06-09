@@ -7,6 +7,7 @@ class ContentsController < ApplicationController
   end
 
   def edit
+    #binding.pry　paramsちゃんと通ってる
   end
 
   def update
