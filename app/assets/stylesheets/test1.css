@@ -147,7 +147,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   border-radius: 20px;
-  top:100px;
+  top:50px;
   left:440px;
   background-color:white;
   text-align: center;
@@ -159,7 +159,7 @@ border-radius: 20px;}
   background-color: black;
   position: absolute;
   left:610px;
-  top:100px;
+  top:50px;
   border-radius: 20px;
   background:white;
   box-shadow: 0px 30px 10px -10px #999999;
@@ -169,7 +169,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:780px;
-  top:100px;
+  top:50px;
   border-radius: 20px;
   background:white; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -179,7 +179,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:440px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background-color:white; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -189,17 +189,28 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:610px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background:#c93a40;
    text-align: center;
   box-shadow: 0px 30px 10px -10px #999999;}
+  #main2 p{
+    font-size: 20px;
+    line-height:150px;
+    color: white;
+  }
+  .a2,.b2,.c2,.d2,.f2,.g2,.h2,.i2 p{
+    font-size: 20px;
+    line-height: 150px;
+    color:black;
+  
+  }
 .f2
 {width:150px;
   height:150px;
   position: absolute;
   left:780px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background-color:white;
   box-shadow: 0px 30px 10px -10px #999999; 
@@ -212,14 +223,14 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
   left:440px;
-  top:440px;
+  top:390px;
   border-radius: 20px;}
 .h2
 {width:150px;
   height:150px;
   position: absolute;
   left:610px;
-  top:440px;
+  top:370px;
   background-color:white;
    box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
@@ -232,7 +243,7 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
   text-align: center;
   left:780px;
-  top:440px;
+  top:390px;
   border-radius: 20px;}
 
 .a2:hover{
@@ -272,7 +283,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   border-radius: 20px;
-  top:100px;
+  top:50px;
   left:440px;
   background-color:white;
   text-align: center;
@@ -283,7 +294,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:610px;
-  top:100px;
+  top:50px;
   border-radius: 20px;
   background:white;
   box-shadow: 0px 30px 10px -10px #999999;
@@ -293,7 +304,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:780px;
-  top:100px;
+  top:50px;
   border-radius: 20px;
   background:white; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -303,7 +314,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:440px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background-color:white; 
   box-shadow: 0px 30px 10px -10px #999999;
@@ -313,7 +324,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:610px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background:#f89405;
    text-align: center;
@@ -323,7 +334,7 @@ border-radius: 20px;}
   height:150px;
   position: absolute;
   left:780px;
-  top:270px;
+  top:220px;
   border-radius: 20px;
   background-color:white;
   box-shadow: 0px 30px 10px -10px #999999; 
@@ -336,14 +347,14 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
   left:440px;
-  top:440px;
+  top:390px;
   border-radius: 20px;}
 .h3
 {width:150px;
   height:150px;
   position: absolute;
   left:610px;
-  top:440px;
+  top:390px;
   background-color:white;
    box-shadow: 0px 30px 10px -10px #999999;
    text-align: center;
@@ -356,7 +367,7 @@ border-radius: 20px;}
   box-shadow: 0px 30px 10px -10px #999999;
   text-align: center;
   left:780px;
-  top:440px;
+  top:390px;
   border-radius: 20px;}
 
 .a3:hover{
@@ -1693,3 +1704,13 @@ margin-top:200px;
   text-align: center;
   background-color: white;
 }
+
+.modal{display:none;}
+.modalBody{position: fixed; z-index:1000; background: #000; width:690px; left:50%; top:50%; height: 400px}
+.modalBK{position: fixed; z-index:999; height:100%; width:100%;background:#000; opacity: 0.9;filter: alpha(opacity=90);-moz-opacity:0.90;}
+.btns{ cursor: pointer}
+.close{cursor: pointer;}
+.modal{width:690px; color: #eee;}
+.modal p{font-size:12px; text-align:justify;}
+.modal h1{font-weight:bold; font-size: 30px;}
+.modalBody{padding: 10px;}

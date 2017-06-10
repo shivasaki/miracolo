@@ -33,7 +33,7 @@
     </div>
   <% end %>
 
-  <div class="e" id="trigger-overlay" type="button"><br>
+  <div class="e btns" data-tgt="wd1"  type="button"><br>
     <p ><%= hashpick(@user.id, 00, "title") %></p>
   </div>
 
@@ -44,7 +44,7 @@
   <% end %>
 
   <%= link_to sub_path(id: 60) do %>
-    <div class="g" >
+    <div class=" g" >
       <p><%= hashpick(@user.id, 60, "title") %></p>
     </div>
   <% end %>
@@ -64,11 +64,11 @@
 
 <%= flash.now[:notice] %>
 
-<div class = "overlay overlay-door way" style = "background: #cccccc;" >
-  <button type="button" class="overlay-close">Close</button>
-  <nav>
-    <ul>
-			<li>
+ <div class="modal wd1">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
         <p href="#">
           <strong>Title:</strong>
           <%= hashpick(@user.id, 00, 'title') %>
@@ -93,9 +93,8 @@
         </p>
       </li>
 		</ul>
-	</nav>
-</div>
- 
+	</div>
+
 <script src="js/classie.js"></script>
 <script src="js/demo1.js"></script>
 </body>
