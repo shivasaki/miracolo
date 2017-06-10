@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'main' => 'contents#main'
+  get 'sub' => 'contents#sub'
   get 'contents/emmenu' => 'contents#emmenu'
   get 'contents/esmenu' => 'contents#esmenu'
   get 'contents/edit' => 'contents#edit'

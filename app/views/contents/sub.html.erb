@@ -1,0 +1,55 @@
+<!-- test1ってなってた、メインのページ -->
+<body  style="backgroud:#e6e6e6;">
+<div class="row">
+  <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to '編集', contents_esmenu_path(id: params[:id]), :style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'アカウント', users_edit_path, :style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'ログアウト', logout_path, method: :delete, :style => "color:#e5e5e5;" %></div>
+  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 menubar"><%= link_to 'メインページ', main_path, :style => "color:#e5e5e5;"  %></div>
+</div>
+
+<div class="content col-xs-12 col-md-12 col-lg-12">
+  <div class="a2" id="trigger-overlay" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 1, "title") %></p>
+  </div>
+
+  <div class="b2" id="trigger-overlay1" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 2, "title") %></p>
+  </div>
+
+  <div class="c2" id="trigger-overlay2" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 3, "title") %></p>
+  </div>
+
+  <div class="d2" id="trigger-overlay3" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 4, "title") %></p>
+  </div>
+
+  <%= link_to main_path do %>
+    <div id = "main2" >
+      <p><%= hashpick(@user.id, params[:id], "title") %></p>
+    </div>
+  <% end %>
+
+  <div class="f2" id="trigger-overlay4" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 5, "title") %></p>
+  </div>
+
+  <div class="g2" id="trigger-overlay5" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 6, "title") %></p>
+  </div>
+
+  <div class="h2" id="trigger-overlay6" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 7, "title") %></p>
+  </div>
+  
+  <div class="i2" id="trigger-overlay7" type="button">
+    <p><%= hashpick(@user.id, params[:id].to_i + 8, "title") %></p>
+  </div>
+</div>
+
+<%= flash.now[:notice] %>
+ 
+<script src="js/classie.js"></script>
+<script src="js/demo1.js"></script>
+</body>
