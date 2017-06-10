@@ -1,4 +1,18 @@
 <!-- test1ってなってた、メインのページ -->
+<script>
+  $(function(){
+	$('.btns1').click(function(){
+		wn = '.' + $(this).data('tgt');
+		var mW = $(wn).find('.modalBody').innerWidth() / 2;
+		var mH = $(wn).find('.modalBody').innerHeight() / 2;
+		$(wn).find('.modalBody').css({'margin-left':-mW,'margin-top':-mH});
+		$(wn).fadeIn(500);
+	});
+	$('.close,.modalBK').click(function(){
+		$(wn).fadeOut(500);
+	});
+});
+</script>
 <body  style="backgroud:#e6e6e6;">
 <div class="row">
   <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
@@ -9,19 +23,19 @@
 </div>
 
 <div class="content col-xs-12 col-md-12 col-lg-12">
-  <div class="a2" id="trigger-overlay" type="button">
+  <div class="a2  btns1" data-tgt="wd2" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 1, "title") %></p>
   </div>
 
-  <div class="b2" id="trigger-overlay1" type="button">
+  <div class="b2 btns1" data-tgt="wd3" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 2, "title") %></p>
   </div>
 
-  <div class="c2" id="trigger-overlay2" type="button">
+  <div class="c2 btns1" data-tgt="wd4" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 3, "title") %></p>
   </div>
 
-  <div class="d2" id="trigger-overlay3" type="button">
+  <div class="d2 btns1" data-tgt="wd5" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 4, "title") %></p>
   </div>
 
@@ -31,25 +45,285 @@
     </div>
   <% end %>
 
-  <div class="f2" id="trigger-overlay4" type="button">
+  <div class="f2 btns1" data-tgt="wd6" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 5, "title") %></p>
   </div>
 
-  <div class="g2" id="trigger-overlay5" type="button">
+  <div class="g2 btns1" data-tgt="wd7" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 6, "title") %></p>
   </div>
 
-  <div class="h2" id="trigger-overlay6" type="button">
+  <div class="h2 btns1" data-tgt="wd8" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 7, "title") %></p>
   </div>
   
-  <div class="i2" id="trigger-overlay7" type="button">
+  <div class="i2 btns1" data-tgt="wd9" type="button">
     <p><%= hashpick(@user.id, params[:id].to_i + 8, "title") %></p>
   </div>
 </div>
 
 <%= flash.now[:notice] %>
- 
-<script src="js/classie.js"></script>
-<script src="js/demo1.js"></script>
+ <div class="modal wd2">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+          
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+          
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+
+ <div class="modal wd3">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+          
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+         
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd4">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+          
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+        
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd5">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+          
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd6">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+          
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+          
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+         
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd7">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+        
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd8">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+        
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+         
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+          
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
+	
+	 <div class="modal wd9">
+	<div class="modalBody">
+		<p class="close">×close</p>
+		<ul>
+		<li>
+        <p href="#">
+          <strong>Title:</strong>
+         
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Text:</strong>
+          
+        </p>
+      </li>
+			<li>
+        <p href="#" >
+          <strong>Start:</strong>
+          
+        </p>
+      </li>
+      <li>
+        <p href="#">
+          <strong>End:</strong>
+         
+        </p>
+      </li>
+		</ul>
+	</div>
+	<div class="modalBK"></div>
+	</div>
 </body>
