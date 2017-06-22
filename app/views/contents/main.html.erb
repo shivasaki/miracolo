@@ -1,18 +1,18 @@
-<!-- test1ってなってた、メインのページ -->
 <script>
   $(function(){
-	$('.btns').click(function(){
-		wn = '.' + $(this).data('tgt');
-		var mW = $(wn).find('.modalBody').innerWidth() / 2;
-		var mH = $(wn).find('.modalBody').innerHeight() / 2;
-		$(wn).find('.modalBody').css({'margin-left':-mW,'margin-top':-mH});
-		$(wn).fadeIn(500);
-	});
-	$('.close,.modalBK').click(function(){
-		$(wn).fadeOut(500);
-	});
-});
+	  $('.btns').click(function(){
+		  wn = '.' + $(this).data('tgt');
+		  var mW = $(wn).find('.modalBody').innerWidth() / 2;
+		  var mH = $(wn).find('.modalBody').innerHeight() / 2;
+		  $(wn).find('.modalBody').css({'margin-left':-mW,'margin-top':-mH});
+		  $(wn).fadeIn(500);
+	  });
+	  $('.close,.modalBK').click(function(){
+		  $(wn).fadeOut(500);
+	  });
+  });
 </script>
+
 <body  style="backgroud:#e6e6e6;">
 <div class="row">
   <%= link_to "MIRACOLO", root_path,:style => "color:#e6e6e6; font-size:50px;", :class => "col-xs-12 col-md-12 col-lg-12 header" %>
@@ -80,30 +80,26 @@
  
 <div class="modal wd1">
 	<div class="modalBody">
-		<p class="close">×close</p>
+		<p class="close">close</p>
 		<ul>
 		<li>
         <p href="#">
-          <strong>Title:</strong>
-          
+          <strong>Title:<%= hashpick(@user.id, 00, "title") %></strong>
         </p>
       </li>
 			<li>
         <p href="#" >
-          <strong>Text:</strong>
-         
+          <strong>Text:<%= hashpick(@user.id, 00, "text") %></strong>
         </p>
       </li>
 			<li>
         <p href="#" >
-          <strong>Start:</strong>
-          
+          <strong>Start:<%= hashpick(@user.id, 00, "start") %></strong>
         </p>
       </li>
       <li>
         <p href="#">
-          <strong>End:</strong>
-          
+          <strong>End:<%= hashpick(@user.id, 00, "end") %></strong>
         </p>
       </li>
 		</ul>

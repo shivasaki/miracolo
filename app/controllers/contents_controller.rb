@@ -5,7 +5,11 @@ class ContentsController < ApplicationController
 
   def main
   end
-
+  def sub
+    @main_num = params[:id].to_i / 10 + 1
+    @main_num = "main" + @main_num.to_s
+    #binding.pry
+  end
   def edit
     #binding.pry　paramsちゃんと通ってる
   end
