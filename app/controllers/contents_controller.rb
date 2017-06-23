@@ -10,6 +10,11 @@ class ContentsController < ApplicationController
     @main_num = "main" + @main_num.to_s
     #binding.pry
   end
+  def esmenu
+    @place_id = params[:id].to_i
+    @img = "img" + @place_id.to_s
+  end
+
   def edit
     #binding.pry　paramsちゃんと通ってる
   end
