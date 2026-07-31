@@ -8,7 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 7.1.3'
-gem 'bcrypt',         '3.1.11'
+gem 'bcrypt',         '3.1.22'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
 # 本番ではpostgressを使用する
